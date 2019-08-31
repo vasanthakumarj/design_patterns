@@ -1,0 +1,7 @@
+Let's assume we are building an application where the user is going to manage and deliver content after fetching it from diverse sources, which could be:
+A web page (based on its URL)
+A resource accessed on an FTP server
+A file on the local file system
+A database server
+So, here is the idea: instead of implementing several content classes, each holding the methods responsible for getting the content pieces, assembling them, and showing them inside the application, we can define an abstraction for the Resource Content and a separate interface for the objects that are responsible for fetching the content. Let's try it!
+We begin with the class for our Resource Content abstraction, called ResourceContent. Then, we will need to define the interface for implementation classes that help fetch content, that is, the ResourceContentFetcher class. This concept is called the Implementor
